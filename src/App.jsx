@@ -1,4 +1,5 @@
 import { useState, useCallback } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import StickyDonate from './components/StickyDonate'
@@ -46,6 +47,8 @@ export default function App() {
                 onClose={() => setModalOpen(false)}
                 prefillAmount={prefillAmount}
             />
+            <Analytics />
         </div>
     )
 }
+
